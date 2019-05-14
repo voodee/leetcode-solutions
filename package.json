@@ -4,13 +4,19 @@
   "description": "Options for solving problems from LeetCode",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "jest --watch"
   },
   "author": "Roman Arestovich <eedoov@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.2.0",
+    "jest": "^24.8.0",
     "lint-staged": "^8.1.6",
     "prettier": "1.17.1"
   },
@@ -26,6 +32,7 @@
     ],
     "*.js": [
       "eslint --fix",
+      "cross-env NODE_ENV=test jest --bail --findRelatedTests",
       "git add"
     ]
   }
