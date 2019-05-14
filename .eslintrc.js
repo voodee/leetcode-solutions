@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: ["airbnb-base", "prettier"],
+  extends: ["prettier"],
   plugins: ["prettier"],
   globals: {
     Atomics: "readonly",
@@ -15,5 +15,14 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": "error"
-  }
+  },
+  overrides: [
+    {
+      files: ["**/*.test.js"],
+      env: {
+        jest: true
+      },
+      plugins: ["jest"]
+    }
+  ]
 };
