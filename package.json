@@ -1,0 +1,32 @@
+{
+  "name": "leetcode-solutions",
+  "version": "0.0.1",
+  "description": "Options for solving problems from LeetCode",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Roman Arestovich <eedoov@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "1.17.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
