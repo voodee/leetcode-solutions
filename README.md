@@ -1,1 +1,1 @@
-# leetcode-solutions
+# LeetCode JavaScript Solutions
