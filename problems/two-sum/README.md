@@ -15,6 +15,9 @@ return [0, 1]
 
 ## Solution
 
+Runtime: **52 ms**, faster than **99.46%**of JavaScript online submissions for Two Sum.
+Memory Usage: **35.4 MB**, less than **25.35%** of JavaScript online submissions for Two Sum.
+
 ```javascript
 /**
  * @param {number[]} nums
