@@ -62,7 +62,7 @@ const lengthOfLongestSubstring = function(s) {
 };
 ```
 
-complexity: O(n\*3)
+complexity: O(n^3)
 
 ## Solution №2 (meduim)
 
