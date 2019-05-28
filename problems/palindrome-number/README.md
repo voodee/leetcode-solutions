@@ -29,7 +29,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 Coud you solve it without converting the integer to a string?
 
-## Solution
+## Solution #1 (easy)
 
 Runtime: **168 ms**, faster than **99.38%** of JavaScript online submissions for Palindrome Number.
 Memory Usage: **45.4 MB**, less than **71.09%** of JavaScript online submissions for Palindrome Number.
@@ -52,3 +52,30 @@ const isPalindrome = x => {
 ```
 
 complexity: O(log(len(n)))
+
+## Solution #2 (medium)
+
+Runtime: **180 ms**, faster than **97.65%** of JavaScript online submissions for Palindrome Number.
+Memory Usage: **45.1 MB**, less than **80.70%** of JavaScript online submissions for Palindrome Number.
+
+```javascript
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+const isPalindrome = x => {
+  if (x < 0 || (x % 10 === 0 && x !== 0)) {
+    return false;
+  }
+
+  let revertedNumber = 0;
+  while (x > revertedNumber) {
+    revertedNumber = revertedNumber * 10 + (x % 10);
+    x = Math.floor(x / 10);
+  }
+
+  return x === revertedNumber || x === Math.floor(revertedNumber / 10);
+};
+```
+
+complexity: O(log<sub>10</sub>(n))
